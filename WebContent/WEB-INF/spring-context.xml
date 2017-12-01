@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+		http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- Define para o Spring o local onde se localiza as views do projeto -->
+	<bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/view/" />
+		<property name="suffix" value=".jsp"></property>
+	</bean>
+
+	<!-- Define para o spring onde se localizam os recursos utilizados pelas 
+		jsp -->
+	<mvc:resources location="/res/" mapping="/res/**" />
+
+	<!-- Configura o data source através do xml -->
+	<bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost/agenciatecweb" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
+	</bean>
+
+	<!-- Entity Manager Factory -->
+	<bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+
+		<!-- Associa o data source do hibernate -->
+		<property name="dataSource" ref="mysqlDataSource" />
+
+		<!-- Define a classe que o Spring irá utilizar para se comunicar com o 
+			Hibernate -->
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+		</property>
+
+		<!-- Determina para o hibernate os pacotes onde se encontram os modelos 
+			que serão utilizados para criar o banco de dados -->
+		<property name="packagesToScan">
+			<list>
+				<value>br.com.agenciatecweb.model</value>
+			</list>
+		</property>
+
+		<!-- Define qual ação o hibernate executará quando iniciar o sistema -->
+		<property name="jpaProperties">
+			<props>
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+			</props>
+		</property>
+	</bean>
+
+
+
+	<!-- Configurações para o Spring iniciar as transações do banco de dados 
+		automaticamente -->
+	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"
+		p:entityManagerFactory-ref="entityManagerFactory" />
+
+	<!-- Habilita iniciar transações através de Annotations -->
+	<tx:annotation-driven transaction-manager="transactionManager" />
+
+	<!-- CONFIGURANDO O ARQUIVO DE MENSAGENS PARA O VALIDADOR -->
+	<!-- 
+	<bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>WEB-INF/messenger/validations/validations.pt_BR</value>
+			</list>
+		</property>
+	</bean>
+	-->
+	 
+	<!-- CRIANDO O BEAN VALIDADOR -->
+	<bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean">
+		<property name="validationMessageSource" ref="messageSource" />
+	</bean>
+
+	<!-- Habilita anotar os recursos do spring através de anotações -->
+	<mvc:annotation-driven validator="validator"/>
+
+	<!-- Onde se encontram as classes que o Spring deve mapear -->
+	<context:component-scan base-package="br.com.agenciatecweb" />
+
+	<!-- 
+	<mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/**" />
+			<bean
+				class="br.senai.sp.cfp132.web.interceptor.RestritorURLInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors>
+	-->
+	<!-- Configuração de Jackson para Rodar com Spring -->
+		<bean id="jsonMessageConverter" class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+		
+			<bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
+			<property name="messageConverters">
+				<list>
+					<ref bean="jsonMessageConverter"/>
+				</list>
+			</property>
+		</bean>
+</beans>
