@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
 	pageEncoding="ISO-8859-1"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
 <!DOCTYPE html>
 <html lang="pt-br">
@@ -11,22 +12,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="">
     <meta name="description" content="">
-    <!--
-
-    Template 2075 Digital Team
-
-    http://www.tooplate.com/view/2075-digital-team
-
-    -->
     
     <c:import url="templates/resources.jsp" />
    
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
+<!-- CABECALHO -->
 <c:import url="templates/header.jsp" />
 
 <!-- preloader section -->
+<!-- 
 <div class="preloader">
     <div class="sk-spinner sk-spinner-circle">
         <div class="sk-circle1 sk-circle"></div>
@@ -43,7 +39,7 @@
         <div class="sk-circle12 sk-circle"></div>
     </div>
 </div>
-
+ -->
 
 
 <!-- home section -->
@@ -116,7 +112,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
-                <img src="images/about-img.jpg" class="img-responsive" alt="about img">
+                <img src="/res/images/about-img.jpg" class="img-responsive" alt="about img">
             </div>
             <div class="col-md-6 col-sm-12">
                 <h3 class="bold">TECNOLOGIA WEB</h3>
@@ -166,33 +162,33 @@
                         <div class="iso-box-wrapper col4-iso-box">
 
                             <div class="iso-box html wordpress mobile col-lg-4 col-md-4 col-sm-6">
-                                <a href="images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="images/portfolio-img1.jpg" alt="portfolio img"></a>
+                                <a href="/res/images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="/res/images/portfolio-img1.jpg" alt="portfolio img"></a>
                             </div>
 
                             <div class="iso-box wordpress col-lg-4 col-md-4 col-sm-6">
-                                <a href="images/portfolio-img2.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="images/portfolio-img2.jpg" alt="portfolio img"></a>
+                                <a href="/res/images/portfolio-img2.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="/res/images/portfolio-img2.jpg" alt="portfolio img"></a>
                             </div>
 
                             <div class="iso-box html mobile col-lg-4 col-md-4 col-sm-6">
-                                <a href="images/portfolio-img3.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="images/portfolio-img3.jpg" alt="portfolio img"></a>
+                                <a href="/res/images/portfolio-img3.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="/res/images/portfolio-img3.jpg" alt="portfolio img"></a>
                             </div>
 
                             <div class="iso-box wordpress col-lg-4 col-md-4 col-sm-6">
-                                <a href="images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="images/portfolio-img4.jpg" alt="portfolio img"></a>
+                                <a href="/res/images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="/res/images/portfolio-img4.jpg" alt="portfolio img"></a>
                             </div>
 
                             <div class="iso-box html photoshop col-lg-4 col-md-4 col-sm-6">
-                                <a href="images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="images/portfolio-img5.jpg" alt="portfolio img"></a>
+                                <a href="/res/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="/res/images/portfolio-img5.jpg" alt="portfolio img"></a>
                             </div>
 
                             <div class="iso-box photoshop col-lg-4 col-md-4 col-sm-6">
-                                <a href="images/portfolio-img6.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="images/portfolio-img6.jpg" alt="portfolio img"></a>
+                                <a href="/res/images/portfolio-img6.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="/res/images/portfolio-img6.jpg" alt="portfolio img"></a>
                             </div>
 
                         </div>
@@ -295,20 +291,20 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
-                <form action="#" method="get" class="wow fadeInUp" data-wow-delay="0.6s">
+                <form:form action="contato" method="POST" class="wow fadeInUp" data-wow-delay="0.6s" modelAttribute="contato">
                     <div class="col-md-6 col-sm-6">
-                        <input type="text" class="form-control" placeholder="Nome" name="name">
+                        <form:input path="nome" type="text" class="form-control" placeholder="Nome" name="name" />
                     </div>
                     <div class="col-md-6 col-sm-6">
-                        <input type="email" class="form-control" placeholder="E-mail" name="email">
+                        <form:input path="email" type="email" class="form-control" placeholder="E-mail" name="email" />
                     </div>
                     <div class="col-md-12 col-sm-12">
-                        <textarea class="form-control" placeholder="Mensagem" rows="7" name="message"></textarea>
+                        <form:textarea path="mensagem" class="form-control" placeholder="Mensagem" rows="7" name="message"></form:textarea>
                     </div>
                     <div class="col-md-offset-4 col-md-8 col-sm-offset-4 col-sm-8">
                         <input type="submit" class="form-control" value="ENVIAR MENSAGEM">
                     </div>
-                </form>
+                </form:form>
             </div>
         </div>
     </div>
@@ -332,17 +328,6 @@
         </div>
     </div>
 </footer>
-
-
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/smoothscroll.js"></script>
-<script src="js/isotope.js"></script>
-<script src="js/imagesloaded.min.js"></script>
-<script src="js/nivo-lightbox.min.js"></script>
-<script src="js/jquery.backstretch.min.js"></script>
-<script src="js/wow.min.js"></script>
-<script src="js/custom.js"></script>
 
 </body>
 </html>
