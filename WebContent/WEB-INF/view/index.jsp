@@ -22,7 +22,7 @@
 <c:import url="templates/header.jsp" />
 
 <!-- preloader section -->
-<!-- 
+<!--
 <div class="preloader">
     <div class="sk-spinner sk-spinner-circle">
         <div class="sk-circle1 sk-circle"></div>
@@ -39,9 +39,7 @@
         <div class="sk-circle12 sk-circle"></div>
     </div>
 </div>
- -->
-
-
+-->
 <!-- home section -->
 <a name="index"></a>
 <section id="home">
@@ -112,7 +110,7 @@
                 </div>
             </div>
             <div class="col-md-6 col-sm-12">
-                <img src="/res/images/about-img.jpg" class="img-responsive" alt="about img">
+                <img src="res/images/about-img.jpg" class="img-responsive" alt="about img">
             </div>
             <div class="col-md-6 col-sm-12">
                 <h3 class="bold">TECNOLOGIA WEB</h3>
@@ -162,33 +160,33 @@
                         <div class="iso-box-wrapper col4-iso-box">
 
                             <div class="iso-box html wordpress mobile col-lg-4 col-md-4 col-sm-6">
-                                <a href="/res/images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="/res/images/portfolio-img1.jpg" alt="portfolio img"></a>
+                                <a href="res/images/portfolio-img1.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="res/images/portfolio-img1.jpg" alt="portfolio img"></a>
                             </div>
 
                             <div class="iso-box wordpress col-lg-4 col-md-4 col-sm-6">
-                                <a href="/res/images/portfolio-img2.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="/res/images/portfolio-img2.jpg" alt="portfolio img"></a>
+                                <a href="res/images/portfolio-img2.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="res/images/portfolio-img2.jpg" alt="portfolio img"></a>
                             </div>
 
                             <div class="iso-box html mobile col-lg-4 col-md-4 col-sm-6">
-                                <a href="/res/images/portfolio-img3.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="/res/images/portfolio-img3.jpg" alt="portfolio img"></a>
+                                <a href="res/images/portfolio-img3.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="res/images/portfolio-img3.jpg" alt="portfolio img"></a>
                             </div>
 
                             <div class="iso-box wordpress col-lg-4 col-md-4 col-sm-6">
-                                <a href="/res/images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="/res/images/portfolio-img4.jpg" alt="portfolio img"></a>
+                                <a href="res/images/portfolio-img4.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="res/images/portfolio-img4.jpg" alt="portfolio img"></a>
                             </div>
 
                             <div class="iso-box html photoshop col-lg-4 col-md-4 col-sm-6">
-                                <a href="/res/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="/res/images/portfolio-img5.jpg" alt="portfolio img"></a>
+                                <a href="res/images/portfolio-img5.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="res/images/portfolio-img5.jpg" alt="portfolio img"></a>
                             </div>
 
                             <div class="iso-box photoshop col-lg-4 col-md-4 col-sm-6">
-                                <a href="/res/images/portfolio-img6.jpg" data-lightbox-gallery="portfolio-gallery"><img
-                                        src="/res/images/portfolio-img6.jpg" alt="portfolio img"></a>
+                                <a href="res/images/portfolio-img6.jpg" data-lightbox-gallery="portfolio-gallery"><img
+                                        src="res/images/portfolio-img6.jpg" alt="portfolio img"></a>
                             </div>
 
                         </div>
@@ -311,23 +309,7 @@
 </section>
 
 <!-- footer section -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 col-sm-12">
-                <p>Copyright © Tecnologia Web</p>
-                <hr>
-                <ul class="social-icon">
-                    <li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
-                    <li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
-                    <li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
-                    <li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
-                    <li><a href="#" class="fa fa-tumblr wow fadeIn" data-wow-delay="0.9s"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+<c:import url="templates/footer.jsp" />
 
 </body>
 </html>
