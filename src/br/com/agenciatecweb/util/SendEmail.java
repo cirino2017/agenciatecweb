@@ -34,7 +34,7 @@ public class SendEmail {
 			Message message = new MimeMessage(session);
 			message.setFrom(new InternetAddress("agenciatecweb2018@gmail.com")); // Remetente
 			Address[] toUser = InternetAddress // Destinatário(s)
-					.parse("michael.jordan.java@gmail.com, lucasrodriguescirino@outlook.com");
+					.parse("contato@agenciatecweb.com.br, lucascirino@agenciatecweb.com.br, michael.jordan@agenciatecweb.com.br");
 			message.setRecipients(Message.RecipientType.TO, toUser);
 			message.setSubject("Agência Tec Web");// Assunto
 			message.setText(mensagem);

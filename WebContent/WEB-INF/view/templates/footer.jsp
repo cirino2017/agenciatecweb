@@ -5,11 +5,11 @@
                 <p>Copyright © Tecnologia Web</p>
                 <hr>
                 <ul class="social-icon">
-                    <li><a href="#" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
-                    <li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
+                    <li><a href="https://www.facebook.com/agenciatecweb/" target="_blank" class="fa fa-facebook wow fadeIn" data-wow-delay="0.3s"></a></li>
+                    <!--  <li><a href="#" class="fa fa-twitter wow fadeIn" data-wow-delay="0.6s"></a></li>
                     <li><a href="#" class="fa fa-dribbble wow fadeIn" data-wow-delay="0.9s"></a></li>
                     <li><a href="#" class="fa fa-behance wow fadeIn" data-wow-delay="0.9s"></a></li>
-                    <li><a href="#" class="fa fa-tumblr wow fadeIn" data-wow-delay="0.9s"></a></li>
+                    <li><a href="#" class="fa fa-tumblr wow fadeIn" data-wow-delay="0.9s"></a></li>-->
                 </ul>
             </div>
         </div>
