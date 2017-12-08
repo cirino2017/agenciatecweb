@@ -27,12 +27,17 @@
 <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,500'
 	rel='stylesheet' type='text/css'>
 
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+	crossorigin="anonymous">
+
 
 </head>
 <body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
 
 	<!-- preloader section -->
-	<!--<div class="preloader">
+	<div class="preloader">
 		<div class="sk-spinner sk-spinner-circle">
 			<div class="sk-circle1 sk-circle"></div>
 			<div class="sk-circle2 sk-circle"></div>
@@ -48,7 +53,7 @@
 			<div class="sk-circle12 sk-circle"></div>
 		</div>
 	</div>
-	-->
+
 	<!-- navigation section -->
 	<section class="navbar navbar-fixed-top custom-navbar"
 		role="navigation">
@@ -80,8 +85,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 col-sm-12">
-					<h3>Já pensou um Site completo e gratuito? Pois é, encontrou a
-						solução agora!</h3>
+					<h3>Já pensou em um Site completo e gratuito? Pois é,
+						encontrou a solução agora!</h3>
 					<h3>Pague apenas o valor da hospedagem, ligue já (11)
 						95792-7634</h3>
 					<h1>Tecnologia Web</h1>
@@ -230,6 +235,9 @@
 					</div>
 				</div>
 				<div class="col-md-4 col-sm-6">
+				
+				</div>
+				<div class="col-md-4 col-sm-6">
 					<div class="plan plan-one wow bounceIn" data-wow-delay="0.3s">
 						<div class="plan_title">
 							<i class="icon-mobile medium-icon"></i>
@@ -246,6 +254,9 @@
 							<li>Dominio gratuito</li>
 						</ul>
 					</div>
+				</div>
+				<div class="col-md-4 col-sm-6">
+		
 				</div>
 			</div>
 		</div>
@@ -326,15 +337,26 @@
 		</div>
 	</footer>
 
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+		type="text/javascript"></script>
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<script type="text/javascript" src="res/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="res/js/custom.js"></script>
-	<script type="text/javascript" src="res/js/imagesloaded.min.js"></script>
-	<script type="text/javascript" src="res/js/isotope.js"></script>
-	<script type="text/javascript" src="res/js/jquery.backstretch.min.js"></script>
+
 	<script type="text/javascript" src="res/js/jquery.js"></script>
-	<script type="text/javascript" src="res/js/nivo-lightbox.min.js"></script>
+	<script type="text/javascript" src="res/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="res/js/smoothscroll.js"></script>
+	<script type="text/javascript" src="res/js/isotope.js"></script>
+	<script type="text/javascript" src="res/js/imagesloaded.min.js"></script>
+	<script type="text/javascript" src="res/js/nivo-lightbox.min.js"></script>
+	<script type="text/javascript" src="res/js/jquery.backstretch.min.js"></script>
 	<script type="text/javascript" src="res/js/wow.min.js"></script>
+	<script type="text/javascript" src="res/js/custom.js"></script>
+
+
+
+
+
 </body>
 </html>
